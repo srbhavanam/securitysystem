@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+ 
+   <!-- Base Definition -->
+   <definition name="base-definition" 
+       template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />  
+       <!-- <put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" /> -->  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />  
+   </definition>  
+   
+   <!-- Login Definition -->
+   <definition name="login-definition" 
+       template="/WEB-INF/views/tiles/layouts/loginLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />  
+   </definition>  
+ 
+   <!-- Home Page -->
+   <definition name="welcome" extends="base-definition">  
+       <put-attribute name="title" value="Home" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/welcome.jsp" />  
+   </definition>  
+   
+    <!-- Login Page -->
+   <definition name="login" extends="login-definition">  
+       <put-attribute name="title" value="Login" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />  
+   </definition> 
+
+   <!-- Business Page -->
+   <definition name="sales" extends="base-definition">  
+       <put-attribute name="title" value="Sales" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/sales.jsp" />  
+   </definition>  
+   
+     <definition name="admin" extends="base-definition">  
+       <put-attribute name="title" value="Admin" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/admin.jsp" />  
+   </definition>  
+   
+   <!-- Error  Pages -->
+   <definition name="accessDenied" extends="base-definition">  
+       <put-attribute name="title" value="Error" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/accessDenied.jsp" />  
+   </definition>  
+      
+   <!-- Contact-us Page -->
+   <definition name="contactus" extends="base-definition">  
+       <put-attribute name="title" value="Contact Us" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/contactus.jsp" />  
+   </definition>  
+ 
+</tiles-definitions>
